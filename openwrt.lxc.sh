@@ -1,6 +1,6 @@
 #!/bin/bash
 ##########################################################
-# URL: https://github.com/roacn/pve
+# URL: https://github.com/hyamine/pve-openwrt-tools
 # Description: AutoUpdate for Openwrt
 # Author: Ss.
 # Please use the PVE command line to run the shell script.
@@ -16,8 +16,8 @@ Firmware_Path="/tmp/openwrt/firmware"
 Script_Path="/tmp/openwrt/script"
 Lxc_Path="/tmp/openwrt/lxc"
 Bak_Path="/tmp/openwrt/bak"
-URL_Download_Version="https://raw.githubusercontent.com/roacn/pve/main/lxc/version"
-URL_Download_Script="https://raw.githubusercontent.com/roacn/pve/main/openwrt.lxc.sh"
+URL_Download_Version="https://raw.githubusercontent.com/hyamine/pve-openwrt-tools/main/lxc/version"
+URL_Download_Script="https://raw.githubusercontent.com/hyamine/pve-openwrt-tools/main/openwrt.lxc.sh"
 
 function __error_msg() {
     echo -e "\033[31m[ERROR]\033[0m $*"
@@ -66,7 +66,7 @@ function settings_init() {
     
     if [[ ! -f ${Settings_File} ]]; then
 cat > ${Settings_File} <<-EOF
-Repository="roacn/build-actions"
+Repository="hyamine/openwrt-build-actions"
 Tag_name="AutoUpdate-x86-lxc"
 Github_api="zzz_api"
 Priority="default"
@@ -186,8 +186,8 @@ function settings_show() {
 
 function set_github_repository() {
     echo
-    read -t 60 -p "请输入仓库地址 [用户名/仓库名, 默认roacn/build-actions]:" input_repo || echo
-    input_repo=${input_repo:-"roacn/build-actions"}
+    read -t 60 -p "请输入仓库地址 [用户名/仓库名, 默认hyamine/openwrt-build-actions]:" input_repo || echo
+    input_repo=${input_repo:-"hyamine/openwrt-build-actions"}
     Repository="${input_repo}"
 }
 
@@ -935,7 +935,7 @@ function linux_uname(){
         echo "────────────────────────────────────────────────────────────────────────────"
         echo
         echo "第1步：PVE命令行下载文件"
-        __green_color "wget https://mirror.ghproxy.com/https://raw.githubusercontent.com/roacn/pve/main/openwrt.lxc.sh -O /usr/bin/openwrt && chmod +x /usr/bin/openwrt"
+        __green_color "wget https://mirror.ghproxy.com/https://raw.githubusercontent.com/hyamine/pve-openwrt-tools/main/openwrt.lxc.sh -O /usr/bin/openwrt && chmod +x /usr/bin/openwrt"
         echo
         echo "第2步：PVE命令行输入"
         __green_color "openwrt"

@@ -12,8 +12,8 @@ Pve_no_subscription_list="/etc/apt/sources.list.d/pve-no-subscription.list"
 Pve_enterprise_list="/etc/apt/sources.list.d/pve-enterprise.list"
 Proxmoxlib_js="/usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js"
 
-URL_Download_Version="https://raw.githubusercontent.com/roacn/pve/main/lxc/version"
-URL_Download_Script="https://raw.githubusercontent.com/roacn/pve/main/pve.sh"
+URL_Download_Version="https://raw.githubusercontent.com/hyamine/pve-openwrt-tools/main/lxc/version"
+URL_Download_Script="https://raw.githubusercontent.com/hyamine/pve-openwrt-tools/main/pve.sh"
 
 function __error_msg() {
     echo -e "\033[31m[ERROR]\033[0m $*"

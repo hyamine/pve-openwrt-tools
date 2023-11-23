@@ -1,10 +1,10 @@
 #!/bin/bash
-# URL: https://github.com/roacn/build-actions
+# URL: https://github.com/hyamine/openwrt-build-actions
 # Description: AutoUpdate for Openwrt
 # Author: Ss.
 # Please use the PVE command line to run the shell script.
 # 个人Github地址（自行更改）
-export Apidz="roacn/build-actions"
+export Apidz="hyamine/openwrt-build-actions"
 # release的tag名称（自行更改）
 export Tag_Name="AutoUpdate-lxc"
 # 固件搜索正则表达式（自行更改）
